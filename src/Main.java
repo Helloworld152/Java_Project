@@ -4,7 +4,7 @@ public class Main {
     public static boolean isPrime(int number){
         boolean isPrime = true;
         for (int i = 2; i <= number/2; i++){
-            if (number%i == 0){
+            if (number % i == 0){
                 isPrime = false;
                 break;
             }
@@ -78,5 +78,11 @@ public class Main {
 
 
         System.out.println(isPrime(20));
+        MyFirstClass m1 = new MyFirstClass("ruanying");
+        MyFirstClass m2 = new MyFirstClass("dbjbdbv", 18);
+        MyFirstClass m3 = new MyFirstClass("skcnksn", 19, "sjtu");
+        m1.printInformation();
+        m2.printInformation();
+        m3.printInformation();
     }
 }
