@@ -100,8 +100,6 @@ public class Main{
         double yhi = Double.parseDouble(args[3]);
 
         int T = Integer.parseInt(args[4]);
-
-        Interval1D
         System.out.println(args[0]);
     }
 }
