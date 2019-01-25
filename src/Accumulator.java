@@ -1,3 +1,7 @@
+/**
+ *  实现一个计数器类：
+ *  1. 每加入一个数字后，重新计算均值
+ */
 public class Accumulator {
 
     private double total;
