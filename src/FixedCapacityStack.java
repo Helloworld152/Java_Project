@@ -35,6 +35,7 @@ public class FixedCapacityStack<Item> {
     }
 
     /************************************************************/
+
     public static void main(String[] args) {
 
         FixedCapacityStack<String> s;

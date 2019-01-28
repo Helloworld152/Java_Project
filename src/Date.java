@@ -1,4 +1,4 @@
-public class Date {
+public class Date implements Comparable<Date> {
 
     private final int month;
     private final int day;
@@ -16,8 +16,10 @@ public class Date {
 
     public int getYear(){ return year; }
 
+    // 转化字符串
     public String toString(){ return getMonth() + "/" + getDay() + "/" + getYear(); }
 
+    // 判读是否相等
     public boolean equals(Object x){
 
         if (this == x) return true;
@@ -32,7 +34,23 @@ public class Date {
         return true;
     }
 
+    // 实现Comparable接口
+    public int compareTo(Date that){
+        if (this.year > that.year) return +1;
+        if (this.year < that.year) return -1;
+        if (this.month > that.month) return +1;
+        if (this.month < that.month) return -1;
+        if (this.day > that.day) return +1;
+        if (this.day < that.day) return -1;
+
+        return 0;
+    }
+
+/*******************************************************************************/
     public static void main(String[] args) {
 
+        Date date = new Date(1, 27, 2019);
+        StdOut.println(date.getYear() + " " + date.getMonth() + " " + date.getDay());
+        StdOut.println(date);
     }
 }

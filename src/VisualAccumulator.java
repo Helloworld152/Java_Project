@@ -28,6 +28,7 @@ public class VisualAccumulator {
 
     // 测试用例
     public static void main(String[] args) {
+        StdRandom.setSeed(1);
         int T = Integer.parseInt(args[0]);
 
         VisualAccumulator a = new VisualAccumulator(T, 1.0);

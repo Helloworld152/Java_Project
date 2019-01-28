@@ -1,16 +1,17 @@
-public class Selection {
+public class Shell {
+
     public static void sort(Comparable[] comparables){
         // 排序算法
         int N = comparables.length;
-
-        for (int i = 0; i < N; i++) {
-            int min = i;
-
-            for (int j = i+1; j < N; j++) {
-                if (less(comparables[j], comparables[min]))
-                    min = j;
-                exch(comparables, i, min);
+        int h = 1;
+        while (h < N/3) h = 3*h + 1;
+        while (h >= 1){
+            for (int i = h; i < N; i++) {
+                for (int j = i; j >= h && less(comparables[j], comparables[j-h]); j -= h) {
+                    exch(comparables, j, j-h);
+                }
             }
+            h = h/3;
         }
     }
 
@@ -42,10 +43,14 @@ public class Selection {
         return true;
     }
 
-/****************************************************************/
+    /****************************************************************/
 
     public static void main(String[] args) {
-        Integer[] a = {2, 9, 8, 7, 3, 6, 4, 5, 1, 0};
+
+        Double[] a = new Double[100];
+        for (int i = 0; i < 100; i++) {
+            a[i] = StdRandom.random()*100;
+        }
         sort(a);
         assert isSorted(a);
         show(a);
