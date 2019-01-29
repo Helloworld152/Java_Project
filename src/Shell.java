@@ -1,5 +1,5 @@
 public class Shell {
-
+    /* 希尔排序，根据插入排序改进算法 */
     public static void sort(Comparable[] comparables){
         // 排序算法
         int N = comparables.length;
