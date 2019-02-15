@@ -1,13 +1,15 @@
+public class Quick {
 
-public class Insertion {
-    public static void sort(Comparable[] comparables){
+    public static void sort(Comparable[] a){
         // 排序算法
-        int N = comparables.length;
-        for (int i = 1; i < N; i++) {
-            for (int j = i; j > 0 && less(comparables[j], comparables[j-1]) ; j--) {
-                exch(comparables, j, j - 1);
-            }
-        }
+        StdRandom.shuffle(a);
+        sort(a, 0, a.length - 1);
+    }
+
+
+    private static void sort(Comparable[] a, int lo, int hi){
+
+        if (hi <= lo) return;
     }
 
     // 比较主键顺序
