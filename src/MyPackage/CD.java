@@ -1,6 +1,7 @@
 package MyPackage;
 
-public class CD {
+public class CD extends Item {
+
     private String title;
     private String artist;
     private int numofTracks;
@@ -24,6 +25,5 @@ public class CD {
     public static void main(String[] args) {
 
     }
-
 
 }
