@@ -2,28 +2,32 @@ package MyPackage;
 
 public class CD extends Item {
 
-    private String title;
     private String artist;
     private int numofTracks;
-    private int playingTime;
-    private boolean gotIt = false;
-    private String comment;
 
-    public CD(String title, String artist, int numofTracks, int playingTime, boolean gotIt, String comment) {
-        this.title = title;
+
+    public CD(String title, String artist, int numofTracks, int playingTime, String comment, boolean gotIt) {
+        //
+        super(title, playingTime, comment, gotIt);
         this.artist = artist;
-        this.numofTracks = numofTracks;
-        this.playingTime = playingTime;
-        this.gotIt = gotIt;
-        this.comment = comment;
+    }
+
+    @Override
+    public String toString() {
+        return "CD{" +
+                "artist='" + artist + '\'' +
+                ", numofTracks=" + numofTracks +
+                '}';
     }
 
     public void print() {
-        System.out.println(title + "");
+        System.out.println("");
+        super.print();
     }
 
     public static void main(String[] args) {
-
+        CD cd = new CD("a", "b", 1, 4,"c", false);
+        System.out.println(cd);
     }
 
 }

@@ -11,13 +11,13 @@ public class Database {
     }
 
     public void list(){
-        for ( CD cd : listCD){
-            cd.print();
+        for ( Item item: listCD){
+            item.print();
         }
     }
 
     public static void main(String[] args) {
         Database db = new Database();
-        db.add(new CD("abc", "abc", 4, 60, false, "..."));
+        db.add(new CD("abc", "abc", 4, 60, "...", false));
     }
 }
