@@ -19,5 +19,6 @@ public class Database {
     public static void main(String[] args) {
         Database db = new Database();
         db.add(new CD("abc", "abc", 4, 60, "...", false));
+        System.out.println("你好");
     }
 }
